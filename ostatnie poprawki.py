@@ -3,11 +3,12 @@ import random
 import itertools
 import csv
 
-# program można wyłąćzyć w trakcie trwania próby treningowej lub eksperymentalnej za pomocą przycisku 'x' na klawiaturze, może być wymagane zakończenie pętli poszzególnego bodzca, więc po naciśnięciu x, należy wcisnąć obojętnie którą strzałkę w celu zakończenia
+# program można wyłąćzyć w trakcie trwania próby treningowej lub eksperymentalnej za pomocą przycisku 'x' na klawiaturze, może być wymagane zakończenie pętli poszególnego bodzca, więc po naciśnięciu x, należy wcisnąć obojętnie którą strzałkę w celu zakończenia
 def check_quit():
     if 'x' in event.getKeys():
         core.quit()
 
+# listy i j k to listy bodźców wykorzystywanych w procedurze, możliwe że nie są najbardziej czytelne, ale są wygodne do opisania i dużą rolę odegrało przyzwyczajenie w pisaniu
 # Lista i -bodzce zgodne niezgodne i neutralne do części pierwszej eksperymentalnej -prawo i lewo
 lista_i = [
     ("PRAWO", (0.65, 0)),   # right on the right
